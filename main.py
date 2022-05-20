@@ -9,7 +9,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-MODEL_PATH: str = 'pretrained_models/0.1-ckpt.pth'
+import cv2
+
+epsilon = 0.01
+MODEL_PATH: str = f'pretrained_models/{epsilon}-ckpt.pth'
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 cpu_device = torch.device('cpu')
@@ -58,6 +61,9 @@ random.seed(seed)
 np.random.seed(seed)
 env.action_space.seed(seed)
 
+frame = env.render(mode='rgb_array')
+out = cv2.VideoWriter(f'results/{epsilon}-video.avi',cv2.VideoWriter_fourcc(*'MJPG'), 30, (frame.shape[1], frame.shape[0]))
+
 q = QNetwork(np.array(env.observation_space.shape).prod(), env.action_space.n)
 q.load_state_dict(torch.load(MODEL_PATH, map_location=device))
 q_target = QNetwork(np.array(env.observation_space.shape).prod(), env.action_space.n)
@@ -82,9 +88,14 @@ while True:
     score += r
 
     env.render()
+    frame = env.render('rgb_array')
+    frame = cv2.putText(frame, f'epsilon={epsilon}, score={score}', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 
+                   1, (255, 0, 0), 2, cv2.LINE_AA)
+    out.write(frame)
 
     if done:
         break
 
+out.release()
 print('total score', score)
 env.close()

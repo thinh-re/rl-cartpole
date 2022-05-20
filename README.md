@@ -21,7 +21,20 @@ pytorch 1.11.0 <br>
 Folder `pretrained_models` contains pretrained models with different epsilons (0.01, 0.05, 0.1, 0.5) after over 10000 iterations
 
 # Results
+After 10000 iterations
 ![alt text](10000iters.png)
+
+- Greedy test: Model trained with ε=0.01
+![alt text](results/0.01-result.gif)
+
+- Greedy test: Model trained with ε=0.05
+![alt text](results/0.05-result.gif)
+
+- Greedy test: Model trained with ε=0.1
+![alt text](results/0.1-result.gif)
+
+- Greedy test: Model trained with ε=0.5
+![alt text](results/0.5-result.gif)
 
 # References
 The code is based on https://github.com/seungeunrho/minimalRL/blob/master/dqn.py
