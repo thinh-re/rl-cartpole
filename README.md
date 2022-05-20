@@ -1,5 +1,6 @@
 # Introduction
 Basic Reinforcement Learning: Deep Q Network on CartPole problem (OpenAI Gym) <br>
+Understand the trade-off between exploitation and exploration with ε-policy
 
 # Reinforcement learning
  - ε-policy
@@ -21,7 +22,7 @@ pytorch 1.11.0 <br>
 Folder `pretrained_models` contains pretrained models with different epsilons (0.01, 0.05, 0.1, 0.5) after over 10000 iterations
 
 # Results
-After 10000 iterations
+Average reward (moving average with window=500) for different epsilons after 10000 iterations
 ![alt text](10000iters.png)
 
 - Greedy test: Model trained with ε=0.01
