@@ -1,0 +1,57 @@
+name: gym
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_gnu
+  - ca-certificates=2022.5.18=ha878542_0
+  - cffi=1.15.0=py38h7f8727e_0
+  - intel-openmp=2022.0.1=h06a4308_3633
+  - ld_impl_linux-64=2.36.1=hea4e1c9_2
+  - libblas=3.9.0=14_linux64_mkl
+  - libcblas=3.9.0=14_linux64_mkl
+  - libffi=3.2.1=he1b5a44_1007
+  - libgcc-ng=12.1.0=h8d9b700_16
+  - libgomp=12.1.0=h8d9b700_16
+  - liblapack=3.9.0=14_linux64_mkl
+  - libprotobuf=3.20.1=h6239696_0
+  - libstdcxx-ng=12.1.0=ha89aaad_16
+  - libzlib=1.2.11=h166bdaf_1014
+  - mkl=2022.0.1=h06a4308_117
+  - ncurses=6.3=h27087fc_1
+  - ninja=1.11.0=h924138e_0
+  - numpy=1.22.3=py38h99721a1_2
+  - openssl=1.1.1o=h166bdaf_0
+  - pip=22.1=pyhd8ed1ab_0
+  - pycparser=2.21=pyhd8ed1ab_0
+  - python=3.8.0=h357f687_5
+  - python_abi=3.8=2_cp38
+  - pytorch=1.11.0=cpu_py38h39c826d_1
+  - readline=8.1=h46c0cb4_0
+  - setuptools=62.3.1=py38h578d9bd_0
+  - sleef=3.5.1=h9b69904_2
+  - sqlite=3.38.5=h4ff8645_0
+  - tk=8.6.12=h27826a3_0
+  - typing_extensions=4.2.0=pyha770c72_1
+  - wheel=0.37.1=pyhd8ed1ab_0
+  - xz=5.2.5=h516909a_1
+  - zlib=1.2.11=h166bdaf_1014
+  - pip:
+    - box2d-py==2.3.5
+    - cloudpickle==2.0.0
+    - cython==0.29.30
+    - glfw==2.5.3
+    - gym==0.23.1
+    - gym-notices==0.0.6
+    - imageio==2.19.2
+    - importlib-metadata==4.11.3
+    - importlib-resources==5.7.1
+    - lockfile==0.12.2
+    - lz4==4.0.0
+    - opencv-python==4.5.5.64
+    - pillow==9.1.1
+    - pygame==2.1.0
+    - scipy==1.8.1
+    - zipp==3.8.0
+prefix: /home/re/anaconda3/envs/gym
