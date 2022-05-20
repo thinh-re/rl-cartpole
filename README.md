@@ -1,15 +1,15 @@
 # Introduction
-Basic Deep Reinforcement Learning experiment on CartPole problem (OpenAI gym) <br>
+Basic Reinforcement Learning: Deep Q Network on CartPole problem (OpenAI Gym) <br>
 
 # Reinforcement learning
-ε-policy
-Bellman equation
-Deep Q networks (2 hidden layers)
-
+ - ε-policy
+ - Bellman equation
+ - Deep Q networks (2 hidden layers)
+ - Replay buffer
 
 # Environments
 ## Train
-Use Google colab to train neural networks (`CartPole.ipynb`)
+Use Google Colab (with GPU enabled) to train neural networks (`CartPole.ipynb`)
 
 ## Test
 Ubuntu 22.04 LTS <br>
@@ -22,3 +22,6 @@ Folder `pretrained_models` contains pretrained models with different epsilons (0
 
 # Results
 ![alt text](10000iters.png)
+
+# References
+The code is based on https://github.com/seungeunrho/minimalRL/blob/master/dqn.py
