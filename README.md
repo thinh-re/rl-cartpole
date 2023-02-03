@@ -1,27 +1,43 @@
-# Introduction
-Basic Reinforcement Learning: Deep Q Network on CartPole problem (OpenAI Gym) <br>
-Understand the trade-off between exploitation and exploration with ε-policy
+# Deep Q Network on CartPole problem (OpenAI Gym)
 
-# Reinforcement learning
- - ε-policy
- - Bellman equation
- - Deep Q networks (2 hidden layers)
- - Replay buffer
+## Objectives
 
-# Environments
-## Train
+- Understand the trade-off between exploitation and exploration with ε-policy
+
+## Reinforcement learning
+
+- ε-policy
+- Bellman equation
+- Deep Q networks (2 hidden layers)
+- Replay buffer
+
+## Environments
+
+### Train
+
 Use Google Colab (with GPU enabled) to train neural networks (`CartPole.ipynb`)
 
-## Test
-Ubuntu 22.04 LTS <br>
-python 3.8.0 <bR>
-pytorch 1.11.0 <br>
+4 trained models (after over 10000 iterations) are located in the directory `pretrained_models`:
 
-`python main.py`
+- `0.1-ckpt.pth`: ε = 0.1
+- `0.01-ckpt.pth`: ε = 0.01
+- `0.5-ckpt.pth`: ε = 0.5
+- `0.05-ckpt.pth`: ε = 0.05
 
-Folder `pretrained_models` contains pretrained models with different epsilons (0.01, 0.05, 0.1, 0.5) after over 10000 iterations
+### Test
 
-# Results
+- Ubuntu 22.04 LTS
+- Python 3.8.0
+- Pytorch 1.11.0
+
+Command:
+
+```bash
+python main.py
+```
+
+## Results
+
 Average reward (moving average with window=500) for different epsilons after 10000 iterations
 ![alt text](10000iters.png)
 
@@ -37,5 +53,6 @@ Average reward (moving average with window=500) for different epsilons after 100
 - Greedy test: Model trained with ε=0.5
 ![alt text](results/0.5-result.gif)
 
-# References
+## References
+
 The code is based on https://github.com/seungeunrho/minimalRL/blob/master/dqn.py
